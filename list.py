@@ -10,12 +10,16 @@ numbers = list(range(20));
 bank = [1,2,3,4,5,6,7,8,9,10];
 first,second,*other = bank;
 
-# print(first,second,other);
+# print(first)
+# print(second)
+# print(other)
 
 colors = ["red","green","blue"];
 
 # for index,color in enumerate(colors):
-    # print(color);
+ # print(f'{index}:{color}');
+# for color in colors:
+        # print(color)
     
 colors.append("yellow");
 
@@ -45,8 +49,8 @@ def sort_item(item):
 
 prices = list(map(lambda item:item[1],items));
 prices = [item[1] for item in items];
-print(prices);
+# print(prices);
 
 filtered = list(filter(lambda item:item[1] >= 10, items));
 filtered = [item for item in items if item[1] >= 10];
-print(filtered);
+# print(filtered);
