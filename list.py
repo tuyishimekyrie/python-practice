@@ -23,12 +23,14 @@ colors = ["red","green","blue"];
     
 colors.append("yellow");
 
+
 # colors.pop(0);
 # colors.insert(0,"black");
 # colors.remove("green");
 # del colors[0 : 2];
 # colors.clear();
 # print(colors.index("blue"));
+# print(colors.count("yellow"))
 
 items = [
     ("Product1",10),
@@ -39,11 +41,10 @@ items = [
 def sort_item(item):
     return item[1];
 
-# print(colors);
-
-# items.sort(key=lambda item:item[1]);
-
-# print(items);
+# items.sort(key=lambda item:item[1]))
+# items.sort(key=sort_item)
+# prices = list(map(lambda item:item[1],items))
+# print(prices);
 
 # print(sorted(colors,reverse=True));
 
