@@ -24,3 +24,31 @@ class Point:
 # point = Point(12,13)
 # point.zero()
 # print(point)
+
+class Product:
+    
+    def __init__(self,price):
+        self.price = price
+    
+    def __getstate__(self):
+        return self.__price
+    
+    def __str__(self):
+        return f'{self.__price}'
+    
+    @property
+    def price(self):
+        return self.__price
+    
+    @price.setter
+    def price(self,price):
+        self.__price = price
+    
+    # property(get_price,set_price)
+
+product = Product(100)
+# product.__price = 1000
+# product.set_price(1000)
+product.price = 1000
+# print(product.price)
+print(str(product))
