@@ -1,20 +1,26 @@
+# to define the name of class , you should use PascalCase naming convention
 class Point:
-    default = 0;
-    def __init__(self,x,y):
-        self.x = x;
-        self.y = y;
+    default_color = "yellow"
     
-    @classmethod    
+    # This is a magic method, every method inside a class should have self as a parameter
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+    
+    @classmethod
     def zero(cls):
-        return cls(0,0);
+        return cls(0,0)
+    
+    def __str__(self):
+        return f'({self.x},{self.y})'
         
     def draw(self):
-        print(f"point({self.x},{self.y})");
-        
-point = Point(1,2);
-Point.default = 10;
-print(Point.default);
-print(type(point));
-print(isinstance(point,Point));
-point.draw();
-Point.zero();
+        return f"Point ({self.x},{self.y})"
+
+# point = Point(1,2)
+# print(point.y)
+# print(point.draw())
+# print(point.default_color)
+# point = Point(12,13)
+# point.zero()
+# print(point)
